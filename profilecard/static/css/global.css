@@ -1,0 +1,23 @@
+:root {
+    --primary: #00300a;
+    --secondary: #eeeeee;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Black.ttf);
+}
+  
+@font-face {
+    font-family: Caveat;
+    src: url(../fonts/Caveat-VariableFont_wght.ttf);
+}
+    
+* {
+    font-family: Poppins;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
