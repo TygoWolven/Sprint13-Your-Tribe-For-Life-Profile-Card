@@ -1,15 +1,10 @@
-<!-- <script>
-    let rightMovement = document.getElementById('right');
+<script>
 
-    window.addEventListener('scroll', function(){
-        let value = window.scrollY;
-        rightMovement.style.left = value * 0.25 + 'px';
-    })
-</script> -->
+</script>
 
 <section id="home">
-    <h2 id="right">Wolven Wolven <span>Tygo</span> Wolven Wolven</h2>
-    <h2 id="left">Tygo Tygo <span>Wolven</span> Tygo Tygo</h2>
+    <h2>Wolven Wolven <span>Tygo</span> Wolven Wolven</h2>
+    <h2>Tygo Tygo <span>Wolven</span> Tygo Tygo</h2>
     <p>Frontend Developer</p>
 
     <div class="scrollIcons">
@@ -23,10 +18,7 @@
 </section>
 
 <section id="contact">
-    <ul>
-        <li>Github</li>
-        <li>Instagram</li>
-    </ul>
+
 </section>
 
 
@@ -54,14 +46,14 @@
     h2 {
         font-size: 10em;
         color: transparent;
+        white-space: nowrap;
         text-transform: uppercase;
         -webkit-text-stroke: 5px var(--primary);
-        white-space: nowrap;
-        margin: -0.25em;
     }
 
-    h2:nth-of-type(1) {
-        margin-right: 3em;
+    #home > h2:first-of-type {
+        margin-right: 25%;
+        margin-bottom: -0.5em;
     }
 
     span {
@@ -69,9 +61,16 @@
     }
 
     #home > p {
+        position: absolute;
         font-size: 3em;
         font-family: Caveat;
         margin-left: 33%;
+        margin-top: 9em;
+        transition: 0.1s ease;
+    }
+
+    #home > p:hover {
+        scale: 1.1;
     }
 
     .scrollIcons {
