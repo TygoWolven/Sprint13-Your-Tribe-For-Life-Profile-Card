@@ -1,5 +1,6 @@
 <script>
-
+    import trainTrack from "$lib/assets/trainTrack.png"
+    import mineCart from "$lib/assets/mineCart.png"
 </script>
 
 <section id="home">
@@ -18,11 +19,25 @@
 </section>
 
 <section id="contact">
-
+    <img alt="The project logo" src={mineCart} />
+    <img alt="The project logo" src={trainTrack} />
 </section>
 
 
 <style>
+    #contact > img:first-of-type {
+        animation: minecartDriving 15s linear infinite;
+    }
+
+    @keyframes minecartDriving {
+        0% {
+            transform: translateX(-100%);
+        }   
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
     section {
         width: 100%;
         height: 100vh;
@@ -41,6 +56,18 @@
             transparent 52%
         );
         background-size: 50px;
+
+        & > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            pointer-events: none;
+        }
     }
 
     h2 {
